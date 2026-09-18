@@ -8,7 +8,7 @@ CREATE TABLE Daily_sales (
     revenue      decimal(12,2) not null check (revenue >= 0),
 
         FOREIGN KEY (product_id) 
-        REFERENCES Products(product_id)
+        REFERENCES prod_db.Products(product_id)
 );
  
 CREATE TABLE Product_performance (
@@ -18,5 +18,5 @@ CREATE TABLE Product_performance (
     revenue         decimal(12,2) not null check (revenue >= 0),
 
         FOREIGN KEY (product_id) 
-        REFERENCES Products(product_id)
+        REFERENCES prod_db.Products(product_id)
 );
