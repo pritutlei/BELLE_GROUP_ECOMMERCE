@@ -8,11 +8,12 @@ CREATE TABLE Customers(
 );
 
 CREATE TABLE Addresses (
-    address_id    varchar(10) primary key,
-    customer_id   varchar(10) primary key,
+    address_id    varchar(10),
+    customer_id   varchar(10),
     city          varchar(50),
     province      varchar(50),
 
+    PRIMARY KEY (address_id, customer_id),
     FOREIGN KEY (customer_id) 
     REFERENCES Customers(customer_id)
     ON DELETE CASCADE
